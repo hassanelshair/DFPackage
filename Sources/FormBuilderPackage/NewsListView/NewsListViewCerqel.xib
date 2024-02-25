@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,13 +20,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsListViewCerqel" customModule="CERQEL" customModuleProvider="target">
             <connections>
                 <outlet property="bgBottomView" destination="YMw-1z-9yR" id="Y4E-Ef-K3u"/>
-                <outlet property="emptyImg" destination="DLd-8V-Orp" id="oC0-Q7-GYH"/>
-                <outlet property="emptySearchLbl" destination="2LF-Hj-iOb" id="E6G-xl-IPX"/>
-                <outlet property="emptyStateView" destination="Ge7-EO-r6h" id="sTz-jR-XDA"/>
-                <outlet property="emptyTitle" destination="gql-Lg-31x" id="1Yq-8e-c98"/>
-                <outlet property="emptyViewCenterConstraint" destination="lZe-Rh-xXe" id="8Zg-Hi-PGh"/>
-                <outlet property="headerView" destination="7S6-fc-DZi" id="IGD-2L-aCB"/>
-                <outlet property="itemsTV" destination="1u5-NX-sOx" id="xT9-NK-2HD"/>
                 <outlet property="view" destination="caM-B4-SbN" id="8qM-9h-kkT"/>
             </connections>
         </placeholder>
@@ -46,15 +38,15 @@
                                     <rect key="frame" x="130.5" y="45.5" width="153" height="160"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Latest News Yet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gql-Lg-31x">
-                                    <rect key="frame" x="129" y="225.5" width="156.5" height="22.5"/>
+                                    <rect key="frame" x="134.5" y="225.5" width="145" height="19"/>
                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                    <color key="textColor" name="primary"/>
+                                    <color key="textColor" red="0.32549019607843138" green="0.17254901960784313" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoops ... this information is not available for a moment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-Hj-iOb" customClass="LocalizedLabel" customModule="CERQEL" customModuleProvider="target">
-                                    <rect key="frame" x="62" y="258" width="290" height="39.5"/>
+                                    <rect key="frame" x="62" y="254.5" width="290" height="33"/>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                    <color key="textColor" name="graySubtitle"/>
+                                    <color key="textColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -69,14 +61,6 @@
                                 <constraint firstAttribute="height" constant="311" id="qjR-vx-VVc"/>
                             </constraints>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-NX-sOx">
-                            <rect key="frame" x="0.0" y="140" width="414" height="668"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="RRa-hH-MnU"/>
-                                <outlet property="delegate" destination="-1" id="esb-Bb-Mw0"/>
-                            </connections>
-                        </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7S6-fc-DZi" customClass="CerqelReusableHeader" customModule="CERQEL" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,19 +73,15 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" name="primaryLight"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Ge7-EO-r6h" secondAttribute="trailing" id="69R-0y-1xr"/>
                         <constraint firstItem="7S6-fc-DZi" firstAttribute="top" secondItem="YMw-1z-9yR" secondAttribute="top" id="Cux-ny-xdv"/>
                         <constraint firstItem="Ge7-EO-r6h" firstAttribute="centerX" secondItem="YMw-1z-9yR" secondAttribute="centerX" id="EPz-qX-qcw"/>
                         <constraint firstAttribute="trailing" secondItem="7S6-fc-DZi" secondAttribute="trailing" id="GI4-XJ-wB7"/>
                         <constraint firstItem="Ge7-EO-r6h" firstAttribute="leading" secondItem="YMw-1z-9yR" secondAttribute="leading" id="V6z-A3-XaI"/>
-                        <constraint firstItem="1u5-NX-sOx" firstAttribute="leading" secondItem="YMw-1z-9yR" secondAttribute="leading" id="bIo-De-1Sn"/>
-                        <constraint firstItem="Ge7-EO-r6h" firstAttribute="centerY" secondItem="1u5-NX-sOx" secondAttribute="centerY" constant="70" id="lZe-Rh-xXe"/>
-                        <constraint firstAttribute="trailing" secondItem="1u5-NX-sOx" secondAttribute="trailing" id="mtQ-kY-Neg"/>
-                        <constraint firstItem="1u5-NX-sOx" firstAttribute="top" secondItem="7S6-fc-DZi" secondAttribute="bottom" constant="10" id="plF-t7-g6c"/>
+                        <constraint firstItem="Ge7-EO-r6h" firstAttribute="centerX" secondItem="YMw-1z-9yR" secondAttribute="centerX" id="d7Z-qz-aOa"/>
                         <constraint firstItem="7S6-fc-DZi" firstAttribute="leading" secondItem="YMw-1z-9yR" secondAttribute="leading" id="uif-en-rNR"/>
-                        <constraint firstAttribute="bottom" secondItem="1u5-NX-sOx" secondAttribute="bottom" constant="40" id="xne-3z-1sW"/>
                     </constraints>
                 </view>
             </subviews>
@@ -118,15 +98,9 @@
     </objects>
     <resources>
         <image name="news_empty" width="153" height="160"/>
-        <namedColor name="graySubtitle">
-            <color red="0.45100000500679016" green="0.45100000500679016" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primary">
-            <color red="0.32549019607843138" green="0.17254901960784313" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="primaryLight">
-            <color red="0.94499999284744263" green="0.96100002527236938" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
